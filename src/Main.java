@@ -32,6 +32,7 @@ public class Main
             }
             else if(choice.equalsIgnoreCase("P"))
             {
+                System.out.println();
                 System.out.println("Printing your list");
                 for(String f  : myArrList)
                 {
