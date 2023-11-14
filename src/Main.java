@@ -10,6 +10,7 @@ public class Main
         ArrayList<String> myArrList = new ArrayList<>();
         String addItem = "";
         int itemToDel = 0;
+        int listLength = -1;
 
         boolean done = false;
 
@@ -21,11 +22,13 @@ public class Main
             {
                 addItem = SafeInput.getNonZeroLenString(Scan, "Add an item to the list: ");
                 myArrList.add(addItem);
+                listLength++;
             }
             else if(choice.equalsIgnoreCase("D"))
             {
                 System.out.println("Delete an item from the list");
                 itemToDel = SafeInput.getInt(Scan, "Enter the number of the item you want to remove");
+                // ranged int option: itemToDel = SafeInput.getRangedInt(Scan, "Enter the number of the item you want to remove", 0, listLength);
                 myArrList.remove(itemToDel); // overwrite Tom with Bob
                 for(String f  : myArrList);
 
